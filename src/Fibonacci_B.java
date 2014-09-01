@@ -16,17 +16,13 @@ public class Fibonacci_B {
     private void calculteNumbers(int max) {
         int a = 0;
         int b = 1;
-        int c = a + b;
         print(a, max);
         print(b, max);
-        print(c, max);
-        while (a < max) {
-            a = b + c;
-            print(a, max);
-            b = c + a;
-            print(b, max);
-            c = a + b;
+        while (b < max) {
+            int c = a + b;
             print(c, max);
+            a = b;
+            b = c;
         }
     }
     
